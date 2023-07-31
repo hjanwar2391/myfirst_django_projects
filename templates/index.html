@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is my first template home </h1>
+    <h3>author name : {{name}}</h3>
+    <!-- {%if age >= 18%}
+    <p>tumi boro pola</p>
+    {%else%}
+    <p>tumi choto polapain</p>
+    {%endif%} -->
+
+    <!-- {% if marks >= 80 %}
+    <p>A+ </p>
+    
+    {% elif marks >= 70 and marks <= 79 %}
+    <p>B+ </p>
+
+    {% elif marks >= 60 and marks <= 69 %}
+    <p>C+ </p>
+
+    {% else %}
+    <p>F+ </p>
+    {% endif %} -->
+
+
+
+
+    <!-- value add -->
+    <h1>{{marks | add:"2"}}</h1>
+    
+    <!-- divistble check -->
+    <h1>{{marks | divisibleby:"3"}}</h1>
+
+    <!-- length -->
+    <h1>{{name | length}}</h1>
+
+    <!-- word count -->
+    <h1>{{name | wordcount}}</h1>
+
+    <!-- truncate word -->
+    <h1>{{blog | truncatewords:6}}</h1>
+    <h1>{{blog | truncatechars:20}}</h1>
+
+    <!-- make list -->
+    <h1>{{name | make_list }}</h1>
+
+    <!-- upper case -->
+    <h1>{{name | upper}}</h1>
+
+    <!-- lower case -->
+    <h1>{{name | lower}}</h1>
+
+    <!-- join -->
+    <h1>{{list | join:"/"}}</h1>
+
+
+
+</body>
+
+</html>
