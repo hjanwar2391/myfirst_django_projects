@@ -1,14 +1,23 @@
+{% load static%}
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>django start</title>
+    <link rel="stylesheet" href={% static './css/style.css' %}>
 </head>
 
 <body>
+
     <h1>this is my first template home </h1>
+    {% static 'images/book3.jpg' as books %}
+    <img src="{{books}}" alt="">
+    <img src="{% static './images/book1.jpg' %}" alt="">
+    <img src="{% get_static_prefix %}images/book2.jpg " alt="">
+
     <h3>author name : {{name}}</h3>
     <!-- {%if age >= 18%}
     <p>tumi boro pola</p>
@@ -61,6 +70,8 @@
     <h1>{{list | join:"/"}}</h1>
 
 
+
+    <script src={% static 'js/hello.js' %}></script>
 
 </body>
 
